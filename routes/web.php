@@ -22,7 +22,7 @@ Route::get('/', function () {
             <a href='" . route('contacts.show', 1) . "'>Show contact</a>
         </div>
     ";
-    return $html;
+    return view('welcome');
 });
 
 Route::get('/contacts', function () {

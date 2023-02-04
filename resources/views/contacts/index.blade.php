@@ -30,9 +30,9 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                    @forelse  ($contacts as $id => $contact)
-                                        <tr>
-                                            <th scope="row">1</th>
+                                    @forelse ($contacts as $id => $contact)
+                                        <tr @if($loop->odd) class="table-primary" @endif>
+                                            <th scope="row">{{ $loop->index }}</th>
                                             <td>{{ $contact['name'] }}</td>
                                             <td>{{ $contact['phone'] }}</td>
                                             <td>alfred@test.com</td>

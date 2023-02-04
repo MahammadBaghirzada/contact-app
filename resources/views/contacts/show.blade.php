@@ -7,13 +7,13 @@
     <title>Contact App</title>
 </head>
 <body>
-    <h1>All contacts</h1>
+    <h1>Contact details</h1>
     <div>
-        <a href='{{ route('contacts.create') }}'>Add contact</a>
-
-        @foreach($contacts as $id => $contact)
-            <p>{{ $contact['name'] }} | {{ $contact['phone'] }} | <a href="{{ route('contacts.show', $id) }}">Show</a></p>
-        @endforeach
+        <p>Name: {{ $contact['name'] }}</p>
+        <p>Phone: {{ $contact['phone'] }}</p>
+    </div>
+    <div>
+        <a href='{{ route('contacts.index') }}'>Back to all contacts</a>
     </div>
 </body>
 </html>
